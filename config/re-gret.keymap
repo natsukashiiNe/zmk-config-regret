@@ -1,28 +1,23 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define SYM_L 1
-#define NAV_L 2
-#define NUM_L 3
-#define SYS_L 4
-
 / {
-    #define COMBO_IDLE 175
-
-    combos {
-        compatible = "zmk,combos";
-
-        // Activate system layer on inner thumbs
-        // Brackets and parens
-    };
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
+// -----------------------------------------------------------------------------------------
+// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BSPC |
+// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
+// |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
+//                   | RET | SPC |   | RSH | BSP  | 
             bindings = <
-&kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SQT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RET  &kp SPACE  &kp RSHIFT  &kp BSPC
+    &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y	&kp U  &kp I  &kp O  &kp P
+    &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  	&kp J  &kp K  &kp L  &kp SQT
+    &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  	&kp M  &kp COMMA  &kp DOT &kp FSLH
+		           &kp RET &kp SPACE  	&kp RSHIFT  &kp BSPC
             >;
         };
     };
