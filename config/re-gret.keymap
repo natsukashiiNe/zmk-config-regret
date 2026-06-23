@@ -61,7 +61,7 @@
 
         tri_layer {
             if-layers = <4 1>;
-            then-layer = <5>;
+            then-layer = <4>;
         };
     };
 
@@ -74,12 +74,12 @@
 
         sys_l {
             key-positions = <31 32>;
-            bindings = <&mo 5>;
+            bindings = <&mo 4>;
             require-prior-idle-ms = <COMBO_IDLE>;
         };
 
         ret {
-            key-positions = <6 7 8>;
+            key-positions = <16 17 18>;
             bindings = <&kp RET>;
         };
 
@@ -90,54 +90,18 @@
         };
 
         bsp {
-            key-positions = <26 27>;
+            key-positions = <26 27 28>;
             bindings = <&kp BSPC>;
             require-prior-idle-ms = <COMBO_IDLE>;
         };
 
         semi {
-            key-positions = <27 28>;
+            key-positions = <6 8 7>;
             bindings = <&kp SEMI>;
             require-prior-idle-ms = <COMBO_IDLE>;
         };
 
         // Brackets and parens
-
-        vlbkt {
-            key-positions = <1 11>;
-            bindings = <&kp LBKT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-        };
-
-        vlpar {
-            key-positions = <2 12>;
-            bindings = <&kp LPAR>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-        };
-
-        vlbrc {
-            key-positions = <3 13>;
-            bindings = <&kp LBRC>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-        };
-
-        vrbrc {
-            key-positions = <6 16>;
-            bindings = <&kp RBRC>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-        };
-
-        vrpar {
-            key-positions = <7 17>;
-            bindings = <&kp RPAR>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-        };
-
-        vrbkt {
-            key-positions = <8 18>;
-            bindings = <&kp RBKT>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-        };
     };
 
     keymap {
@@ -153,27 +117,20 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-&trans  &kp LEFT  &kp DOWN  &trans  &trans  &trans  &trans  &kp UP  &kp RIGHT  &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &trans  &trans  &trans  &kp LC(RET)  &kp BSPC  &kp TAB  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT  &kp DOWN  &trans  &trans  &trans  &trans  &kp UP  &kp RIGHT  &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &trans  &trans  &trans  &kp LC(RET)  &kp BSPC  &kp TAB  &trans  &trans  &trans  &trans  &trans  &kp SPACE
             >;
         };
 
         sym_layer {
             display-name = "Symbol";
             bindings = <
-&kp SEMI  &kp MINUS  &kp ASTERISK  &kp EXCLAMATION  &kp EQUAL  &kp TILDE  &trans  &kp LA(AMPERSAND)  &kp PLUS  &kp GRAVE  &kp CARET  &kp LESS_THAN  &kp LEFT_BRACE  &kp LPAR  &kp LEFT_BRACKET  &kp RBKT  &sk RIGHT_PARENTHESIS  &sk RIGHT_BRACE  &sk GREATER_THAN  &sk DOLLAR  &trans  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp SEMI  &kp MINUS  &kp ASTERISK  &kp EXCLAMATION  &kp EQUAL  &kp TILDE  &trans  &kp AMPERSAND  &kp PLUS  &kp GRAVE  &kp CARET  &kp LESS_THAN  &kp LEFT_BRACE  &kp LPAR  &kp LEFT_BRACKET  &kp RBKT  &sk RIGHT_PARENTHESIS  &sk RIGHT_BRACE  &sk GREATER_THAN  &sk DOLLAR  &trans  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE
             >;
         };
 
         sym_layer2 {
             bindings = <
-&trans  &kp ASTERISK  &trans  &trans  &kp PIPE  &kp COLON  &kp RPAR  &kp LPAR  &kp MINUS  &kp GRAVE  &trans  &trans  &trans  &kp LCTRL  &kp AMPERSAND  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp TILDE  &trans  &trans  &trans  &trans  &trans  &kp PLUS  &kp LESS_THAN  &kp GREATER_THAN  &kp BACKSLASH  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        num_layer {
-            display-name = "Number";
-            bindings = <
-&kp SEMI  &kp HASH  &kp PRCNT  &kp AT  &kp PLUS  &kp TILDE  &trans  &kp STAR  &trans  &kp SQT  &hm LCTRL N1  &hm LALT N2  &hm LCMD N3  &hm LSHFT N4  &kp N5  &kp N6  &hm RSHFT N7  &hm RCMD N8  &hm RALT N9  &hm RCTRL N0  &kp AMPS  &trans  &kp DLLR  &kp MINUS  &trans  &trans  &kp BSPC  &kp COMMA  &kp PERIOD  &trans  &trans  &trans  &trans  &trans
+&trans  &kp ASTERISK  &trans  &trans  &trans  &kp COLON  &kp PIPE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp ASTERISK  &trans  &trans  &trans  &trans  &trans  &kp GREATER_THAN  &kp AMPERSAND  &kp MINUS  &kp PLUS  &trans  &trans  &kp LCTRL  &trans  &kp LEFT_ALT
             >;
         };
 
