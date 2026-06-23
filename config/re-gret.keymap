@@ -56,15 +56,6 @@
         };
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <4 1>;
-            then-layer = <4>;
-        };
-    };
-
     #define COMBO_IDLE 175
 
     combos {
