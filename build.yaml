@@ -1,6 +1,2 @@
-name: Build ZMK firmware
-on: [push, pull_request, workflow_dispatch]
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+board: ["xiao_ble"]
+shield: ["re-gret"]

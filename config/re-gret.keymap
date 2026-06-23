@@ -1,8 +1,5 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/rgb.h>
 
 #define SYM_L 1
 #define NAV_L 2
@@ -62,36 +59,6 @@
         compatible = "zmk,combos";
 
         // Activate system layer on inner thumbs
-
-        sys_l {
-            key-positions = <31 32>;
-            bindings = <&mo 4>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-        };
-
-        ret {
-            key-positions = <16 17 18>;
-            bindings = <&kp RET>;
-        };
-
-        esc {
-            key-positions = <1 2>;
-            bindings = <&kp ESC>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-        };
-
-        bsp {
-            key-positions = <26 27 28>;
-            bindings = <&kp BSPC>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-        };
-
-        semi {
-            key-positions = <6 8 7>;
-            bindings = <&kp SEMI>;
-            require-prior-idle-ms = <COMBO_IDLE>;
-        };
-
         // Brackets and parens
     };
 
@@ -101,34 +68,7 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q  &bht LCTRL W  &blt 3 E  &kp R  &kp T  &kp Y  &kp U  &bht LCTRL I  &bht LEFT_ALT O  &kp P  &bht LEFT_ALT A  &bht LEFT_GUI S  &kp D  &kp F  &bht LEFT_ALT G  &kp H  &kp J  &kp K  &kp L  &kp SQT  &kp Z  &kp X  &kp C  &kp V  &kp B  &bht LEFT_GUI N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &mo 1  &kp SPACE  &kp RSHIFT  &mo 2
-            >;
-        };
-
-        nav_layer {
-            display-name = "Nav";
-            bindings = <
-&trans  &kp LEFT  &kp DOWN  &trans  &trans  &trans  &trans  &kp UP  &kp RIGHT  &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans  &trans  &trans  &trans  &trans  &kp LC(RET)  &kp BSPC  &kp TAB  &trans  &trans  &trans  &trans  &trans  &kp SPACE
-            >;
-        };
-
-        sym_layer {
-            display-name = "Symbol";
-            bindings = <
-&kp SEMI  &kp MINUS  &kp ASTERISK  &kp EXCLAMATION  &kp EQUAL  &kp TILDE  &trans  &kp AMPERSAND  &kp PLUS  &kp GRAVE  &kp CARET  &kp LESS_THAN  &kp LEFT_BRACE  &kp LPAR  &kp LEFT_BRACKET  &kp RBKT  &sk RIGHT_PARENTHESIS  &sk RIGHT_BRACE  &sk GREATER_THAN  &sk DOLLAR  &trans  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp SPACE
-            >;
-        };
-
-        sym_layer2 {
-            bindings = <
-&trans  &kp ASTERISK  &trans  &trans  &trans  &kp COLON  &kp PIPE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &trans  &trans  &trans  &trans  &trans  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp ASTERISK  &trans  &trans  &trans  &trans  &trans  &kp GREATER_THAN  &kp AMPERSAND  &kp MINUS  &kp PLUS  &trans  &trans  &kp LCTRL  &trans  &kp LEFT_ALT
-            >;
-        };
-
-        system_layer {
-            display-name = "System";
-            bindings = <
-&bootloader  &studio_unlock  &none  &none  &none  &rgb_ug RGB_TOG  &none  &none  &none  &none  &kp LCTRL  &kp LALT  &kp LCMD  &kp LSHFT  &out OUT_TOG  &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &none  &bt BT_CLR  &none  &none  &none  &none  &none  &kp C_PP  &none  &none  &none  &trans  &trans  &trans  &trans
+&kp Q  &bht LCTRL W  &kp E  &kp R  &kp T  &kp Y  &kp U  &bht LCTRL I  &bht LEFT_ALT O  &kp P  &kp A  &bht LEFT_GUI S  &kp D  &bht LCTRL F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SQT  &kp Z  &kp X  &kp C  &kp V  &kp B  &bht LEFT_GUI N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RET  &kp SPACE  &kp RSHIFT  &kp BSPC
             >;
         };
     };
