@@ -7,52 +7,6 @@
 #define SYS_L 4
 
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-
-        bht: bht {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BHT";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <150>;
-            flavor = "balanced";
-        };
-
-        blt: blt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BLT";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
-            flavor = "balanced";
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <350>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
-            flavor = "balanced";
-        };
-    };
-
     #define COMBO_IDLE 175
 
     combos {
@@ -68,7 +22,7 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp Q  &bht LCTRL W  &kp E  &kp R  &kp T  &kp Y  &kp U  &bht LCTRL I  &bht LEFT_ALT O  &kp P  &kp A  &bht LEFT_GUI S  &kp D  &bht LCTRL F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SQT  &kp Z  &kp X  &kp C  &kp V  &kp B  &bht LEFT_GUI N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RET  &kp SPACE  &kp RSHIFT  &kp BSPC
+&kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SQT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RET  &kp SPACE  &kp RSHIFT  &kp BSPC
             >;
         };
     };
